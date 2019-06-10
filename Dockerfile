@@ -27,6 +27,18 @@ WORKDIR /home/developer/.vim/bundle
 RUN git clone https://github.com/aiya000/vim-ghcid-quickfix
 RUN echo  "let g:ghcid_quickfix_showing = 'quickfix_on_error'" >> /home/developer/.vimrc 
 
+# vim hindent
+RUN git clone https://github.com/alx741/vim-hindent
+RUN echo  "g:hindent_on_save = 1" >> /home/developer/.vimrc 
+RUN echo  "g:hindent_indent_size = 2" >> /home/developer/.vimrc 
+RUN echo  "g:hindent_line_length = 200'" >> /home/developer/.vimrc 
+RUN echo  "g:hindent_command = 'stack exec -- hindent'" >> /home/developer/.vimrc 
+
+# vim-hindent (octol)
+RUN git clone https://github.com/octol/vim-hindent
+RUN echo "let g:hindent_style = 'gibiansky'" >> /home/developer/.vimrc
+
+
 WORKDIR /home/developer
 
 
