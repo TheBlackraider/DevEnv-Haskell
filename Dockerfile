@@ -16,16 +16,16 @@ WORKDIR /home/developer
 
 
 # ghcid
-RUN git clone https://github.com/ndmitchell/ghcid.git
-WORKDIR /home/blackraider/ghcid
-RUN stack install ghcid
-ADD --chown=developer:developer .ghci /home/developer/.ghci_sample
+#RUN git clone https://github.com/ndmitchell/ghcid.git
+#WORKDIR /home/blackraider/ghcid
+#RUN stack install ghcid
+#ADD --chown=developer:developer .ghci /home/developer/.ghci_sample
 
 
 # vim-ghcid-quickfix
-WORKDIR /home/developer/.vim/bundle
-RUN git clone https://github.com/aiya000/vim-ghcid-quickfix
-RUN echo  "let g:ghcid_quickfix_showing = 'quickfix_on_error'" >> /home/developer/.vimrc 
+#WORKDIR /home/developer/.vim/bundle
+#RUN git clone https://github.com/aiya000/vim-ghcid-quickfix
+#RUN echo  "let g:ghcid_quickfix_showing = 'quickfix_on_error'" >> /home/developer/.vimrc 
 
 # vim hindent
 #RUN git clone https://github.com/alx741/vim-hindent
@@ -35,8 +35,8 @@ RUN echo  "let g:ghcid_quickfix_showing = 'quickfix_on_error'" >> /home/develope
 #RUN echo  "g:hindent_command = 'stack exec -- hindent'" >> /home/developer/.vimrc 
 
 # vim-hindent (octol)
-RUN git clone https://github.com/octol/vim-hindent
-RUN echo "let g:hindent_style = 'gibiansky'" >> /home/developer/.vimrc
+#RUN git clone https://github.com/octol/vim-hindent
+#RUN echo "let g:hindent_style = 'gibiansky'" >> /home/developer/.vimrc
 
 
 WORKDIR /home/developer
